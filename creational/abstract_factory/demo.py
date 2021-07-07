@@ -1,20 +1,21 @@
-from models.factories.factorySelector import FactorySelector
-
-CUSTOMERS_CHOSEN_STYLE = 'Old'
-
-factory = FactorySelector.createFactory(CUSTOMERS_CHOSEN_STYLE)
-chair = factory.create_chair()
-table = factory.create_table()
-chair.sit_on()
-table.place_item('test item')
+from models.factories import FactorySelector, Factory
 
 
-CUSTOMERS_CHOSEN_STYLE = 'Modern'
+def create_and_enjoy_furniture(factory: Factory):
+    chair = factory.create_chair()
+    table = factory.create_table()
+    chair.sit_on()
+    table.place_item('a bowl')
 
-factory = FactorySelector.createFactory(CUSTOMERS_CHOSEN_STYLE)
-chair = factory.create_chair()
-table = factory.create_table()
-chair.sit_on()
-table.place_item('test item')
+
+print('=================    Old Factory    =================')
+factory = FactorySelector.create_factory(FactorySelector.OLD_STYlE)
+create_and_enjoy_furniture(factory)
+
+print()
+print('=================    Modern Factory    =================')
+factory = FactorySelector.create_factory(FactorySelector.MODERN_STYLE)
+create_and_enjoy_furniture(factory)
+
 
 

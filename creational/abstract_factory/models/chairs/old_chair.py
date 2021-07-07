@@ -1,4 +1,4 @@
-from models.chairs.chair import Chair
+from .chair import Chair
 
 
 class OldChair(Chair):

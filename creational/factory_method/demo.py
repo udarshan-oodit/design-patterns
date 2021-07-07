@@ -1,30 +1,31 @@
-from models.shops.cape_town_pizza_shop import CapeTownPizzaShop
-from models.shops.joburg_pizza_shop import JoburgPizzaShop
-
-print('=================    Cape Town Pizza Shop    =================')
-cpt = CapeTownPizzaShop()
-
-print('-> Margherita Pizza')
-pizza = cpt.order_pizza('Margherita')
-print(pizza)
-print()
+from models.shops import CapeTownPizzaShop, JoburgPizzaShop, PizzaShop
 
 
-print('-> Pepperoni Pizza')
-pizza = cpt.order_pizza('Pepperoni')
-print(pizza)
-print()
-
-print('=================    Joburg Pizza Shop    =================')
-jhb = JoburgPizzaShop()
-
-print('-> Margherita Pizza')
-pizza = jhb.order_pizza('Margherita')
-print(pizza)
-print()
+def make_margherita_pizza(shop: PizzaShop):
+    print('-> Margherita Pizza')
+    pizza = shop.order_pizza('Margherita')
+    print(pizza)
+    print()
 
 
-print('-> Pepperoni Pizza')
-pizza = jhb.order_pizza('Pepperoni')
-print(pizza)
-print()
+def make_pepperoni_pizza(shop: PizzaShop):
+    print('-> Pepperoni Pizza')
+    pizza = shop.order_pizza('Pepperoni')
+    print(pizza)
+    print()
+
+
+def main():
+    print('=================    Cape Town Pizza Shop    =================')
+    shop = CapeTownPizzaShop()
+    make_margherita_pizza(shop)
+    make_pepperoni_pizza(shop)
+
+    print('=================    Joburg Pizza Shop    =================')
+    shop = JoburgPizzaShop()
+    make_margherita_pizza(shop)
+    make_pepperoni_pizza(shop)
+
+
+if __name__ == '__main__':
+    main()

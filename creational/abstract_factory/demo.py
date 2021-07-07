@@ -8,14 +8,16 @@ def create_and_enjoy_furniture(factory: Factory):
     table.place_item('a bowl')
 
 
-print('=================    Old Factory    =================')
-factory = FactorySelector.create_factory(FactorySelector.OLD_STYlE)
-create_and_enjoy_furniture(factory)
+def main():
+    print('=================    Old Factory    =================')
+    factory = FactorySelector.create_factory(FactorySelector.OLD_STYlE)
+    create_and_enjoy_furniture(factory)
 
-print()
-print('=================    Modern Factory    =================')
-factory = FactorySelector.create_factory(FactorySelector.MODERN_STYLE)
-create_and_enjoy_furniture(factory)
+    print()
+    print('=================    Modern Factory    =================')
+    factory = FactorySelector.create_factory(FactorySelector.MODERN_STYLE)
+    create_and_enjoy_furniture(factory)
 
 
-
+if __name__ == '__main__':
+    main()

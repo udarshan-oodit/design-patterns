@@ -19,23 +19,23 @@ class Builder:
         self.has_swimming_pool = False
         self.has_deck = False
 
-    def buildFloors(self, num_floors):
+    def build_floors(self, num_floors):
         self.floors = num_floors
         return self
 
-    def buildGarage(self):
+    def build_garage(self):
         self.has_garage = True
         return self
 
-    def buildPool(self):
+    def build_pool(self):
         self.has_garage = True
         return self
 
-    def buildDeck(self):
+    def build_deck(self):
         self.has_deck = True
         return self
 
-    def getHouse(self):
+    def get_house(self):
         house = House(self)
         self = Builder()
         return house

@@ -1,10 +1,16 @@
-from houseDirector import HouseDirector
+from house_director import HouseDirector
 
-house = HouseDirector.buildBasicHouse()
+print('Building a basic house...')
+house = HouseDirector.build_basic_house()
 print(house)
+print()
 
-house = HouseDirector.buildFancyHouse()
+print('Building a fancy house...')
+house = HouseDirector.build_fancy_house()
 print(house)
+print()
 
-house = HouseDirector.buildApartmentBlock()
+print('Building an apartment block...')
+house = HouseDirector.build_apartment_block()
 print(house)
+print()

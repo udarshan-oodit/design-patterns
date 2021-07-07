@@ -1,4 +1,4 @@
-from .pizzaShop import PizzaShop
+from .pizza_shop import PizzaShop
 from models.pizzas.pizza import Pizza
 from ..pizzas.margherita import Margherita
 from ..pizzas.pepperoni import Pepperoni
@@ -10,12 +10,12 @@ class JoburgPizzaShop(PizzaShop):
         if pizza_name == 'Margherita':
             pizza = Margherita()
             print('jhb: adding jhb cheese ')
-            pizza.addTopping('Joburg extra cheese')
+            pizza.add_topping('Joburg extra cheese')
             return pizza
         elif pizza_name == 'Pepperoni':
             pizza = Pepperoni()
             print('jhb: adding chilli')
-            pizza.addTopping('Joburg Chilli')
+            pizza.add_topping('Joburg Chilli')
             return pizza
         else:
             raise Exception(f'Pizza {pizza_name} not found')

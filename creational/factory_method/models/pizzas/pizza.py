@@ -1,6 +1,6 @@
 class Pizza:
 
-    def __init__(self, sauce: str, cheese: str, toppings: list):
+    def __init__(self, sauce: str, cheese: str, toppings: list = []):
         self.sauce = sauce
         self.cheese = cheese
         self.toppings = toppings
@@ -17,5 +17,5 @@ class Pizza:
     def box(self):
         print('Boxing the pizza')
 
-    def addTopping(self, topping: str):
+    def add_topping(self, topping: str):
         self.toppings.append(topping)
